@@ -14,6 +14,6 @@ jobs:
       - name: Step 1 - Echo out a GitHub Actions Secret to the logs
         run: |
           echo "The GitHub Action Secret will be masked:  "
-          The_Ejemplo=${{secrets.Ejemplo}}
-          echo "::add-mask::$The_Ejemplo" >> $GITHUB_ENV
+          echo The_Ejemplo=${{secrets.Ejemplo}} >> $GITHUB_ENV
+          # echo "::add-mask::$The_Ejemplo" >> $GITHUB_ENV
 
