@@ -6,7 +6,7 @@ on:
 
 jobs:
   secrets-in-github-actions:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     # The Secrect Actions GitHub example has three steps
     steps:
