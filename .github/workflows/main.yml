@@ -15,5 +15,5 @@ jobs:
         run: |
           echo "The GitHub Action Secret will be masked:  "
           echo "::add-mask::${{ secrets.Ejemplo}}"
-          echo "Trick to echo GitHub Actions Secret:  "
-          echo ${{secrets.Ejemplo}} | sed 's/./& /g' 
+          # echo "Trick to echo GitHub Actions Secret:  "
+          # echo ${{secrets.Ejemplo}} | sed 's/./& /g' 
