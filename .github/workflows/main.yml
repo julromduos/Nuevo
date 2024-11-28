@@ -15,5 +15,5 @@ jobs:
         run: |
           echo "The GitHub Action Secret will be masked:  "
           The_Ejemplo=${{secrets.Ejemplo}} 
-          cat "::add-mask::$The_Ejemplo" >> $GITHUB_ENV
+          cat $The_Ejemplo >> $GITHUB_ENV
 
