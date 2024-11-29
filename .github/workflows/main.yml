@@ -11,9 +11,13 @@ jobs:
     # The Secrect Actions GitHub example has three steps
     steps:
       # Show how to print unmasked GitHub secrets to the console
-      - name: Step 1 - Echo out a GitHub Actions Secret to the logs
+      - name: Step 1 - Env variables
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          THE_EJEMPLO: ${{ secrets.Ejemplo }}
+      - name: Step 2 - Echo out a GitHub Actions Secret to the logs
         run: |
           echo "The GitHub Action Secret will be masked:  "
-          The_Ejemplo:${{secrets.Ejemplo}}
-          echo "$The_Ejemplo" >> $GITHUB_ENV
+          
+          echo THE_EJEMPLO >> $GITHUB_ENV
 
