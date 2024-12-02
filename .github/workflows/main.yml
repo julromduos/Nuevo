@@ -7,7 +7,7 @@ on:
 jobs:
   secrets-in-github-actions:
     runs-on: ubuntu-latest
-
+    environment: Prod
     # The Secrect Actions GitHub example has three steps
     steps:
       # Show how to print unmasked GitHub secrets to the console
@@ -15,10 +15,10 @@ jobs:
         #env:
          # THE_EJEMPLO: ${{ secrets.Ejemplo }}
         run: |
-          echo ${{ secrets.Ejemplo }}
-          THE_EJEMPLO="${{ secrets.Ejemplo }}"
+          echo ${{ secrets.Entorno }}
+          THE_EJEMPLO="${{ secrets.Entorno }}"
           echo "The GitHub Action Secret will be masked:  "
-          echo SECRET="${{ secrets.Ejemplo }}" >> $GITHUB_ENV
+          echo SECRET="${{ secrets.Entorno }}" >> $GITHUB_ENV
       - name: Step 2 - Check environment variables
         run: |
           echo $SECRET
