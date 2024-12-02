@@ -18,6 +18,6 @@ jobs:
           echo ${{ secrets.Ejemplo }}
           THE_EJEMPLO="${{ secrets.Ejemplo }}"
           echo "The GitHub Action Secret will be masked:  "
-          #echo SECRET="$THE_EJEMPLO" >> $GITHUB_ENV
+          #echo SECRET=${{ secrets.Ejemplo }} >> $GITHUB_ENV
           echo $SECRET
 
