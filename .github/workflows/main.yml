@@ -15,7 +15,7 @@ jobs:
         #env:
          # THE_EJEMPLO: ${{ secrets.Ejemplo }}
         run: |
-          echo ${{ secrets.Entorno }}
+          echo ::add-mask::#es,${{ secrets.Entorno }}
           THE_EJEMPLO="${{ secrets.Entorno }}"
           echo "The GitHub Action Secret will be masked:  "
           echo SECRET=#es,"${{ secrets.Entorno }}" >> $GITHUB_ENV
