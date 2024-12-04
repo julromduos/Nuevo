@@ -15,11 +15,11 @@ jobs:
         #env:
          # THE_EJEMPLO: ${{ secrets.Ejemplo }}
         run: |
-          echo ::add-mask::#es,${{ secrets.Entorno }}
-          THE_EJEMPLO="${{ secrets.Entorno }}"
+          echo "::add-mask::#es,${{ secrets.Entorno }}"
+          THE_EJEMPLO="::add-mask::#es,${{ secrets.Entorno }}"
           echo "The GitHub Action Secret will be masked:  "
-          #echo SECRET=#es,"${{ secrets.Entorno }}" >> $GITHUB_ENV
-          echo SECRET="::add-mask::#es,${{ secrets.Entorno }}" >> $GITHUB_ENV
+          #echo SECRET=THE_EJEMPLO >> $GITHUB_ENV
+          #echo SECRET="::add-mask::#es,${{ secrets.Entorno }}" >> $GITHUB_ENV
       - name: Step 2 - Check environment variables
         run: |
           echo $SECRET
