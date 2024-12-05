@@ -14,7 +14,7 @@ jobs:
       - name: Step 1 - Echo out a GitHub Actions Secret to the logs
         env:
          THE_EJEMPLO: ${{ secrets.Prueba }}
-         if:  env.THE_EJEMPLO == '"correcto"'
+         if:  env.THE_EJEMPLO == 'correcto'
          run: echo "I know what the secret token is!"
         run: |
           echo "CI=true" >> $GITHUB_ENV
