@@ -15,7 +15,7 @@ jobs:
         #env:
          #THE_EJEMPLO: "${{ secrets.Prueba }},${{ secrets.Prueba2 }}"
         run: |
-          echo ${{secrets.Prueba}} | sed 's/./& /g' >> $GITHUB_ENV
+          echo "${{secrets.Prueba}} | sed 's/./& /g'" >> $GITHUB_ENV
 
 
 
