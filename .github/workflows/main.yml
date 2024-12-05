@@ -12,12 +12,13 @@ jobs:
     steps:
       # Show how to print unmasked GitHub secrets to the console
       - name: Step 1 - Echo out a GitHub Actions Secret to the logs
-        #env:
-         #SECRET: ${{ secrets.Prueba }} | base64 -d
+        env:
+         EJEMPLO: $(echo ${{ secrets.Prueba }} | base64 -d )
         run: |
           echo $(echo ${{ secrets.Prueba }} | base64 -d )
-          #echo SECRET=$(echo ${{ secrets.Prueba }} | base64 -d ) >> $GITHUB_ENV
-          #echo $SECRET
+          echo SECRET=$(echo ${{ secrets.Prueba }} | base64 -d ) >> $GITHUB_ENV
+          echo $SECRET
+          echo $EJEMPLO
 
 
 
