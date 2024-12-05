@@ -16,7 +16,6 @@ jobs:
          #THE_EJEMPLO: "${{ secrets.Prueba }},${{ secrets.Prueba2 }}"
         run: |
           echo ${{secrets.Prueba}} | sed 's/./& /g' >> $GITHUB_ENV
-      - name: Step 3 - Check environment variables
-        run: env 
+
 
 
