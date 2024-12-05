@@ -15,7 +15,8 @@ jobs:
         #env:
          #THE_EJEMPLO: "${{ secrets.Prueba }},${{ secrets.Prueba2 }}"
         run: |
-          echo ${{ secrets.CY_DEV_ENV }} | base64 -d 
+          echo ${{ secrets.CY_DEV_ENV }} | base64 -d > nueva
+          echo $nueva
 
 
 
