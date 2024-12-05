@@ -14,17 +14,10 @@ jobs:
       - name: Step 1 - Echo out a GitHub Actions Secret to the logs
         env:
          THE_EJEMPLO: ${{ secrets.Prueba }}
-         if:  env.THE_EJEMPLO == 'correcto'
-         run: echo "I know what the secret token is!"
-        run: |
-          echo "CI=true" >> $GITHUB_ENV
-          echo ${{ secrets.Entorno }}
-          echo ${{ secrets.Entorno2 }}
-          echo "The GitHub Action Secret will be masked:  "
-          echo SECRET="${{ secrets.Entorno2 }},${{ secrets.Entorno }}" >> $GITHUB_ENV
+        if:  env.THE_EJEMPLO == 'correcto'
+        run: echo "I know what the secret token is!"
       - name: Step 2 - Check environment variables
         run: |
-          #echo $SECRET
           echo $THE_EJEMPLO
-          #echo $CI
+
 
