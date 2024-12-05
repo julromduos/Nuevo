@@ -15,7 +15,8 @@ jobs:
         #env:
          #THE_EJEMPLO: "${{ secrets.Prueba }},${{ secrets.Prueba2 }}"
         run: |
-          echo ${{ secrets.Prueba }} | base64 -d
+          echo SECRET=${{ secrets.Prueba }} | base64 -d >> $GITHUB_ENV
+          env
 
 
 
