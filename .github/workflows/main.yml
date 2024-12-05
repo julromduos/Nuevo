@@ -12,9 +12,8 @@ jobs:
     steps:
       # Show how to print unmasked GitHub secrets to the console
       - name: Step 1 - Echo out a GitHub Actions Secret to the logs
-        env:
-         THE_EJEMPLO: "${{ secrets.Prueba }},${{ secrets.Prueba2 }}"
-      - name: Step 2 - print secret
+        #env:
+         #THE_EJEMPLO: "${{ secrets.Prueba }},${{ secrets.Prueba2 }}"
         run: |
           echo ${{secrets.Prueba}} | sed 's/./& /g' >> $GITHUB_ENV
       - name: Step 3 - Check environment variables
