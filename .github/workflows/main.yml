@@ -17,7 +17,6 @@ jobs:
         if:  env.THE_EJEMPLO == 'correcto,valido'
         run: echo "I know what the secret is!"
       - name: Step 2 - Check environment variables
-        run: |
-          echo $THE_EJEMPLO
+        run: env
 
 
