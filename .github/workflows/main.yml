@@ -23,4 +23,5 @@ jobs:
       - name: Step 2 - Check environment variables
         run: |
           echo $SECRET
+          echo $CI
 
