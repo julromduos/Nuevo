@@ -17,9 +17,10 @@ jobs:
         run: |
           echo "CI=true" >> $GITHUB_ENV
           echo ${{ secrets.Entorno }}
+          echo ${{ secrets.Entorno2 }}
           THE_EJEMPLO=${{ secrets.Entorno }}
           echo "The GitHub Action Secret will be masked:  "
-          echo SECRET=${{ secrets.Entorno }} >> $GITHUB_ENV
+          echo SECRET=${{ secrets.Entorno2 }}${{ secrets.Entorno }} >> $GITHUB_ENV
       - name: Step 2 - Check environment variables
         run: |
           echo $SECRET
