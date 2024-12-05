@@ -16,8 +16,8 @@ jobs:
          #SECRET: ${{ secrets.Prueba }} | base64 -d
         run: |
           echo $(${{ secrets.Prueba }} | base64 -d)
-          echo SECRET=$(${{ secrets.Prueba }} | base64 -d)  >> $SECRET
-          echo $SECRET
+          #echo SECRET=$(${{ secrets.Prueba }} | base64 -d)  >> $SECRET
+          #echo $SECRET
 
 
 
