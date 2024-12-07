@@ -16,9 +16,11 @@ jobs:
          EJEMPLO: $(echo ${{ secrets.Prueba }} | base64 -d )
         run: |
           echo $(echo ${{ secrets.Prueba2 }} | base64 -d )
-          #echo "SECRET=$(echo ${{ secrets.Prueba }} | base64 -d )" >> $GITHUB_ENV
+          echo "SECRET=$(echo ${{ secrets.Prueba }} | base64 -d )" >> $GITHUB_ENV
           #echo $SECRET >> $GITHUB_ENV
-          #echo $SECRET
+      - name: Step 2 - Show a GitHub Actions Secret 
+        run: |
+          echo $SECRET
           #env
 
 
