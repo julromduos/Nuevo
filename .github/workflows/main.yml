@@ -22,6 +22,11 @@ jobs:
         run: |
           echo $SECRET
           #env
+      - name: Run Cypress test
+        run: npx cypress run
+        env:
+          SECRETO: $(echo ${{ secrets.Prueba }} 
+      
 
 
 
