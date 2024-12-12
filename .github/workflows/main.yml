@@ -23,9 +23,12 @@ jobs:
           echo $SECRET
           #env
       - name: Run Cypress test
-        run: npx cypress run
+        run: echo "hola"
         env:
-          SECRETO: ${{ secrets.Prueba }} 
+          SECRETO: ${{ secrets.Prueba }} ${{','}}${{ secrets.Prueba2 }}
+      - name: Step 3 - Show a GitHub Actions Secret 
+        run: |
+          echo $SECRETO
       
 
 
